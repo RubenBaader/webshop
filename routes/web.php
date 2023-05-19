@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    error_log("SITE LOADED SUCCESSFULLY");
     return view('welcome');
+});
+
+Route::get('/hello', function () {
+    // Log::info("message");
+    return ["hello", "world"];
 });
